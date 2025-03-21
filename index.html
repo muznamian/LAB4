@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GGR472 Lab 4</title>
+    <!-- mapbox API -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Turf.js -->
+    <script src='https://unpkg.com/@turf/turf@7.2.0/turf.min.js'></script>
+    
+</head>
+
+<body>
+
+    <!-- MAP CONTAINER -->
+    <div id='map1' class='map'></div>
+
+     <!-- Insert the button to show the bounding box -->
+     <button type="button" id="bboxbutton">Generate Bounding Box and the hexgrid</button>
+
+    <script src="script.js"></script>
+
+     
+
+     <!-- LEGEND -->
+     <div id='location-points' class='legend'>
+        <h4 style= "text-align: center; font-style: normal; font-size: large;font-family: Georgia"> The Number of Pedestrian and Cyclist Collisions Across Toronto </h4> 
+
+        <div><span></span>No collisions: 0</div> 
+
+        <div><span></span>More then 10 collisions </div>
+
+        <div><span></span>More then 25 collisions</div>
+
+        <div><span></span>Maximun collisions </div>
+
+    </div>
+
+
+</body>
+
+</html>
