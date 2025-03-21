@@ -1,0 +1,55 @@
+.map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.legend {
+    position: absolute;
+    background-color: rgba(200, 202, 78, 0.89);
+    bottom: 0;
+    right: 0;
+    margin: 0 15px 40px 0; /*top margin, right margin, bottom margin, left margin*/
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(189, 151, 27, 0.959);
+    max-width: 200px;
+}
+
+.legend h4 {
+    margin: 0 0 15px;
+}
+
+.legend div {
+    margin-bottom: 3px;
+}
+
+.legend span {
+    display: inline-block;
+    border-radius: 60%; /*Allow for the shape to chnage and create a curve border to make a circle like fugure*/
+    height: 8px; /* the size of circle*/
+    width: 8px;
+    margin-right: 6px; /*the position of circle*/
+}
+
+/*Add color to each child div in the legend */
+.legend div:nth-child(2) span {
+    background-color:white;
+}
+
+    .legend div:nth-child(3) span {
+        background-color:green;
+    }
+
+        .legend div:nth-child(4) span {
+            background-color: yellow;
+        }
+        
+            .legend div:nth-child(5) span {
+                background-color: blue;
+            }
+                
+             
