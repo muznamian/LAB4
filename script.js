@@ -94,7 +94,7 @@ fetch('https://raw.githubusercontent.com/muznamian/LAB4/refs/heads/main/pedcyc_c
 map.on('click', 'collishexfill', (e) => {
     new mapboxgl.Popup() //Define the new popup object for the click feature
         .setLngLat(e.lngLat) //One idea is a method to set coordinates of popup based on mouse click location
-        .setHTML("<b>number of collisions'</b> " + e.features[0].properties.COUNT) // the coli hex grid is the number of collisions in each hexagon 
+        .setHTML("<b>number of collisions</b> " + e.features[0].properties.COUNT) // the coli hex grid is the number of collisions in each hexagon 
 .addTo(map); // Show the popup on the map
 
 });
