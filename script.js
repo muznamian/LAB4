@@ -8,7 +8,7 @@ Step 1: INITIALIZE MAP
 // Define access token
 mapboxgl.accessToken = 'pk.eyJ1IjoibXV6bmFtaWFuIiwiYSI6ImNtNXBsc2xjcDAyaWkybm9wZXFuMjNzMTQifQ.0ATJsQJDSlSrpNrQpdMq0Q'; //****ADD YOUR PUBLIC ACCESS TOKEN*****
 
-// Initialize map and edit to your preference
+// Show the map and edit to your preference
 const map = new mapboxgl.Map({
     container: 'map1', // container id in HTML
     style: 'mapbox://styles/muznamian/cm8duefd3003e01paffekeqno',  // ****ADD MAP STYLE HERE *****
@@ -18,9 +18,9 @@ const map = new mapboxgl.Map({
 
 
 /*--------------------------------------------------------------------
-Step 2: VIEW GEOJSON POINT DATA ON MAP
+Step 2: VIEW GEOJSON POINT DATA ON MAP So we can see the points 
 --------------------------------------------------------------------*/
-let pedcyc_collisiongeojson;
+let pedcyc_collisiongeojson; // the points that will show the collision numbers 
 fetch('https://raw.githubusercontent.com/muznamian/LAB4/refs/heads/main/pedcyc_collision.geojson')
     .then(response => response.json())
     .then(response => {
@@ -47,7 +47,7 @@ fetch('https://raw.githubusercontent.com/muznamian/LAB4/refs/heads/main/pedcyc_c
             }
         });
     
-        // Generate the hex grid
+        // Generate the hex grid by applying the specific code 
         let envelope = turf.bbox(pedcyc_collisiongeojson);
         console.log("Bounding Box:", envelope);
     
@@ -83,7 +83,7 @@ fetch('https://raw.githubusercontent.com/muznamian/LAB4/refs/heads/main/pedcyc_c
                     '#ffffff',  // ordering how many collisions for this it is 0 in white 
                     10, 'green',  // for this it is more then 10 in green so it is different 
                     25, 'yellow',  // for this it is more then 25 in yellow so it is different 
-                    maxcollisions, "blue"  // the maximun number of collisions can appear in blue
+                    maxcollisions, "blue"  // the maximum number of collisions can appear in blue
                 ],
                 'fill-opacity': 0.8
             },
